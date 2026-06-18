@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADLER MIND 협동조합 정관 검토</title>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="ADLER MIND 협동조합 정관">
+<meta property="og:description" content="발기인분들께서는 정관을 검토해주십시오.">
+<meta property="og:image" content="https://simjimind.github.io/adlermind/image/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://simjimind.github.io/adlermind/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ADLER MIND 협동조합 정관">
+<meta name="twitter:description" content="발기인분들께서는 정관을 검토해주십시오.">
+<meta name="twitter:image" content="https://simjimind.github.io/adlermind/image/og-image.jpg">
+<style>
+  :root {
+    --green: #555272;
+    --green-light: #8e8cb0;
+    --green-pale: #f0eff7;
+    --cream: #f5f5f9;
+    --text: #36344f;
+    --muted: #6b7280;
+    --border: #dcdbe8;
+    --yellow: #fef9ec;
+    --blue-pale: #edf1fa;
+    --red-pale: #fde8e8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Serif KR', 'Malgun Gothic', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* 상단 고정 바 */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--green);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .topbar label { font-size: 13px; opacity: 0.85; white-space: nowrap; }
+  .topbar select {
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    background: white;
+    color: var(--green);
+    cursor: pointer;
+    min-width: 110px;
+  }
+  .topbar .title { flex: 1; font-size: 15px; font-weight: bold; letter-spacing: 0.05em; }
+  .comment-count-badge {
+    background: var(--green-light);
+    color: white;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  /* 헤더 */
+  .hero {
+    background: linear-gradient(135deg, #555272 0%, #42405e 100%);
+    color: white;
+    padding: 48px 24px 36px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 26px; letter-spacing: 0.08em; margin-bottom: 8px; }
+  .hero p { font-size: 13px; opacity: 0.75; }
+  .hero .meta { margin-top: 16px; display: flex; justify-content: center; gap: 24px; font-size: 12px; opacity: 0.7; }
+
+  /* 안내 박스 */
+  .guide-box {
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 16px 20px;
+    background: var(--blue-pale);
+    border-left: 4px solid #4a9fd4;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: #2c5f8a;
+  }
+  .guide-box b { display: block; margin-bottom: 6px; font-size: 14px; }
+
+  /* 메인 컨텐츠 */
+  .container { max-width: 760px; margin: 0 auto; padding: 0 16px 60px; }
+
+  /* 장 헤더 */
+  .chapter {
+    margin-top: 40px;
+    border-top: 2px solid var(--green);
+    padding-top: 16px;
+  }
+  .chapter-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--green);
+    margin-bottom: 4px;
+  }
+
+  /* 조문 */
+  .article {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 12px 0;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+  .article:hover { box-shadow: 0 2px 12px rgba(45,106,79,0.1); }
+  .article-header {
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .article-num {
+    background: var(--green-pale);
+    color: var(--green);
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 9px;
+    border-radius: 12px;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .article-body { flex: 1; }
+  .article-title { font-weight: bold; margin-bottom: 4px; font-size: 14px; }
+  .article-content { font-size: 13px; color: var(--muted); line-height: 1.7; }
+  .article-content p { margin-bottom: 4px; }
+  .article-content .indent { padding-left: 16px; }
+
+  /* 의견 섹션 */
+  .comment-section {
+    border-top: 1px solid var(--border);
+    background: #f9fbf9;
+    padding: 14px 16px;
+  }
+  .comment-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--green);
+    font-weight: bold;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .comment-toggle .count-badge {
+    background: var(--green-pale);
+    color: var(--green);
+    border-radius: 10px;
+    padding: 1px 8px;
+    font-size: 11px;
+  }
+  .comment-form { display: none; margin-top: 12px; }
+  .comment-form.open { display: block; }
+  .type-btns { display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; }
+  .type-btn {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1.5px solid var(--border);
+    background: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.15s;
+  }
+  .type-btn:hover { border-color: var(--green-light); }
+  .type-btn.selected-동의 { background: var(--green-pale); border-color: var(--green); color: var(--green); }
+  .type-btn.selected-수정의견 { background: var(--yellow); border-color: #d4a017; color: #7a5c00; }
+  .type-btn.selected-질문 { background: var(--blue-pale); border-color: #4a9fd4; color: #2c5f8a; }
+  textarea.comment-input {
+    width: 100%;
+    min-height: 80px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    background: white;
+    transition: border-color 0.2s;
+  }
+  textarea.comment-input:focus { outline: none; border-color: var(--green-light); }
+  .submit-row { display: flex; justify-content: flex-end; margin-top: 8px; gap: 8px; }
+  .btn-submit {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover { background: #42405e; }
+  .btn-cancel {
+    background: none;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+
+  /* 댓글 목록 */
+  .comments-list { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .comment-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+  }
+  .comment-item.동의 { background: var(--green-pale); border-left: 3px solid var(--green); }
+  .comment-item.수정의견 { background: var(--yellow); border-left: 3px solid #d4a017; }
+  .comment-item.질문 { background: var(--blue-pale); border-left: 3px solid #4a9fd4; }
+  .comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .comment-member { font-weight: bold; font-size: 12px; }
+  .comment-type-label {
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .동의 .comment-type-label { background: var(--green); color: white; }
+  .수정의견 .comment-type-label { background: #d4a017; color: white; }
+  .질문 .comment-type-label { background: #4a9fd4; color: white; }
+  .comment-time { font-size: 11px; color: var(--muted); margin-left: auto; }
+  .comment-text { color: var(--text); line-height: 1.6; }
+  .no-comment { font-size: 12px; color: var(--muted); font-style: italic; text-align: center; padding: 8px; }
+
+  /* 부칙 */
+  .addendum {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 12px 0;
+    padding: 16px;
+  }
+  .addendum-title { font-weight: bold; color: var(--green); margin-bottom: 8px; font-size: 14px; }
+
+  /* 확정사항 표 */
+  .summary-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+  .summary-table th, .summary-table td { padding: 8px 12px; border: 1px solid var(--border); text-align: left; }
+  .summary-table th { background: var(--green-pale); color: var(--green); font-weight: bold; width: 35%; }
+
+  /* 동의 현황판 */
+  .approval-panel {
+    background: white;
+    border: 2px solid var(--green);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 20px auto;
+    max-width: 760px;
+  }
+  .approval-panel h3 { font-size: 15px; color: var(--green); margin-bottom: 14px; font-weight: bold; }
+  .approval-grid { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .approval-card {
+    flex: 1; min-width: 110px;
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .approval-card.동의 { background: var(--green-pale); border-color: var(--green); }
+  .approval-card.보류 { background: var(--yellow); border-color: #d4a017; }
+  .approval-card .member-name { font-weight: bold; font-size: 13px; margin-bottom: 4px; }
+  .approval-card .status-label { font-size: 12px; color: var(--muted); }
+  .approval-card.동의 .status-label { color: var(--green); font-weight: bold; }
+  .approval-card.보류 .status-label { color: #7a5c00; font-weight: bold; }
+  .approval-card .approval-time { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .approval-actions { display: flex; gap: 8px; justify-content: center; }
+  .btn-approve {
+    background: var(--green); color: white; border: none;
+    padding: 10px 28px; border-radius: 24px; font-size: 14px;
+    font-weight: bold; cursor: pointer; transition: background 0.2s;
+  }
+  .btn-approve:hover { background: #42405e; }
+  .btn-hold {
+    background: white; color: #7a5c00; border: 1.5px solid #d4a017;
+    padding: 10px 20px; border-radius: 24px; font-size: 14px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .btn-hold:hover { background: var(--yellow); }
+  .approval-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+
+  .toast {
+    position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+    background: #333; color: white; padding: 10px 24px; border-radius: 24px;
+    font-size: 13px; opacity: 0; transition: opacity 0.3s; z-index: 999;
+  }
+  .toast.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="title">📜 ADLER MIND 협동조합 정관 검토</span>
+  <label>내 이름:</label>
+  <select id="memberSelect">
+    <option value="">-- 선택 --</option>
+    <option value="이경숙">이경숙</option>
+    <option value="고미경">고미경</option>
+    <option value="신옥선">신옥선</option>
+    <option value="박정연">박정연</option>
+    <option value="김이수">김이수</option>
+  </select>
+  <span class="comment-count-badge" id="totalCountBadge">의견 0개</span>
+</div>
+
+<div class="hero">
+  <h1>ADLER MIND 협동조합 정관</h1>
+  <p>협동조합기본법에 따라 설립되는 일반협동조합</p>
+  <div class="meta">
+    <span>작성일: 2026년 6월 18일</span>
+    <span>발기인: 5명</span>
+    <span>사무소: 경기도 광주시</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 동의 현황판 -->
+  <div class="approval-panel">
+    <h3>✅ 발기인 동의 현황</h3>
+    <div class="approval-grid" id="approvalGrid">
+      <div class="approval-card" id="card-이경숙"><div class="member-name">이경숙</div><div class="status-label">미확인</div><div class="approval-time"></div></div>
+      <div class="approval-card" id="card-고미경"><div class="member-name">고미경</div><div class="status-label">미확인</div><div class="approval-time"></div></div>
+      <div class="approval-card" id="card-신옥선"><div class="member-name">신옥선</div><div class="status-label">미확인</div><div class="approval-time"></div></div>
+      <div class="approval-card" id="card-박정연"><div class="member-name">박정연</div><div class="status-label">미확인</div><div class="approval-time"></div></div>
+      <div class="approval-card" id="card-김이수"><div class="member-name">김이수</div><div class="status-label">미확인</div><div class="approval-time"></div></div>
+    </div>
+    <div class="approval-actions">
+      <button class="btn-approve" onclick="submitApproval('동의')">✅ 정관 전체에 동의합니다</button>
+      <button class="btn-hold" onclick="submitApproval('보류')">⏸ 검토 중 (보류)</button>
+    </div>
+    <p class="approval-note">이름을 선택한 후 클릭하세요. 의견 변경 시 다시 클릭하면 업데이트됩니다.</p>
+  </div>
+
+  <div class="guide-box">
+    <b>💬 검토 방법</b>
+    상단에서 <strong>내 이름을 선택</strong>한 후, 각 조문 아래 [의견 달기]를 눌러 의견을 남겨주세요.<br>
+    <strong>동의</strong> · <strong>수정의견</strong> · <strong>질문</strong> 중 하나를 선택하고 내용을 작성하면 발기인 전원이 실시간으로 확인할 수 있습니다.
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제1장 총칙</div></div>
+
+  <div class="article" data-article="제1조">
+    <div class="article-header">
+      <span class="article-num">제1조</span>
+      <div class="article-body">
+        <div class="article-title">목적</div>
+        <div class="article-content"><p>이 협동조합은 아들러 개인심리학에 기반한 심리상담 서비스 및 교육·연구 활동을 협동의 방식으로 수행함으로써 조합원의 전문성 향상과 지역사회 정신건강 증진에 이바지하는 것을 목적으로 한다.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제1조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제1조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="article" data-article="제2조">
+    <div class="article-header">
+      <span class="article-num">제2조</span>
+      <div class="article-body">
+        <div class="article-title">명칭</div>
+        <div class="article-content"><p>이 조합의 명칭은 "ADLER MIND 협동조합"이라 한다.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제2조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제2조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="article" data-article="제3조">
+    <div class="article-header">
+      <span class="article-num">제3조</span>
+      <div class="article-body">
+        <div class="article-title">사무소의 소재지</div>
+        <div class="article-content"><p>① 이 조합의 주된 사무소는 경기도 광주시 남종면 산수로 1652-16에 둔다.</p><p>② 필요한 경우, 이사회 결의로 사무소를 이전할 수 있다.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제3조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제3조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="article" data-article="제4조">
+    <div class="article-header">
+      <span class="article-num">제4조</span>
+      <div class="article-body">
+        <div class="article-title">사업구역</div>
+        <div class="article-content"><p>이 조합의 사업구역은 경기도로 한다. 다만, 필요한 경우 이사회 결의로 사업구역을 조정할 수 있다.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제4조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제4조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="article" data-article="제5조">
+    <div class="article-header">
+      <span class="article-num">제5조</span>
+      <div class="article-body">
+        <div class="article-title">공고방법</div>
+        <div class="article-content"><p>이 조합의 공고는 조합원 전원에게 전자우편 또는 문자메시지로 한다. 긴급한 경우 전화 통지 후 7일 이내 서면 확인.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제5조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제5조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제2장 조합원</div></div>
+
+  <div class="article" data-article="제6조">
+    <div class="article-header">
+      <span class="article-num">제6조</span>
+      <div class="article-body">
+        <div class="article-title">조합원의 자격</div>
+        <div class="article-content">
+          <p class="indent">1. 아들러 심리학 관련 상담사 자격증을 취득하였거나 취득 과정 중인 자</p>
+          <p class="indent">2. 심리상담 분야의 전문가로서 이사회가 인정한 자</p>
+          <p class="indent">3. 이 조합의 사업에 참여하기를 희망하는 자</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제6조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제6조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="article" data-article="제7조~제12조">
+    <div class="article-header">
+      <span class="article-num">제7~12조</span>
+      <div class="article-body">
+        <div class="article-title">가입 · 탈퇴 · 제명 · 권리 · 의무</div>
+        <div class="article-content">
+          <p><b>제7조(가입)</b> 가입신청서 → 이사회 2주 이내 결의 → 출자금 납입 후 자격 취득</p>
+          <p><b>제8조(탈퇴)</b> 60일 전 서면 통지. 사망·파산 시 당연 탈퇴.</p>
+          <p><b>제9조(제명)</b> 총회 의결. 사전 소명 기회 부여.</p>
+          <p><b>제10조(환급)</b> 탈퇴·제명 후 회계연도 종료 3개월 이내 환급.</p>
+          <p><b>제11조(권리)</b> 의결권·선거권·사업이용권·정보청구권·잉여금배당권.</p>
+          <p><b>제12조(의무)</b> 정관 준수·출자금 납부·총회 결의 이행.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제7조~제12조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제7조~제12조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제3장 출자</div></div>
+
+  <div class="article" data-article="제13조~제16조">
+    <div class="article-header">
+      <span class="article-num">제13~16조</span>
+      <div class="article-body">
+        <div class="article-title">출자금 · 납입 · 양도 · 경비</div>
+        <div class="article-content">
+          <p><b>제13조(출자)</b> 1좌 = 100,000원. 최소 1좌. 1인 한도 전체 30% 이하.</p>
+          <p><b>제14조(납입)</b> 승인 후 14일 이내 납입.</p>
+          <p><b>제15조(양도)</b> 이사회 승인으로 다른 조합원에게만 양도.</p>
+          <p><b>제16조(경비)</b> 사업 수입으로 충당. 부족 시 총회 결의로 조합원 부담.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제13조~제16조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제13조~제16조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제4장 총회</div></div>
+
+  <div class="article" data-article="제17조~제20조">
+    <div class="article-header">
+      <span class="article-num">제17~20조</span>
+      <div class="article-body">
+        <div class="article-title">총회 구성 · 의결</div>
+        <div class="article-content">
+          <p><b>제17조(구성)</b> 조합원 전원. 1인 1표. 서면 위임 가능.</p>
+          <p><b>제18조(소집)</b> 정기: 회계연도 종료 후 3개월 이내. 임시: 이사장 또는 조합원 2인 이상 요청.</p>
+          <p><b>제19조(의결사항)</b> 정관 변경, 임원 선출·해임, 예산·결산, 제명, 잉여금 처분, 합병·해산.</p>
+          <p><b>제20조(정족수)</b> 과반수 출석·찬성. 정관변경·해산은 전원 동의.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제17조~제20조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제17조~제20조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제5장 임원</div></div>
+
+  <div class="article" data-article="제21조~제27조">
+    <div class="article-header">
+      <span class="article-num">제21~27조</span>
+      <div class="article-body">
+        <div class="article-title">임원 구성 · 직무 · 임기</div>
+        <div class="article-content">
+          <p><b>제21조(구성)</b> 이사장 1명, 이사 2명 이상, 감사 1명.</p>
+          <p><b>제22~23조</b> 총회에서 선출. 임기 2년, 연임 가능.</p>
+          <p><b>제24조(이사장)</b> 조합 대표, 총회·이사회 의장.</p>
+          <p><b>제25조(이사회)</b> 이사 과반수 출석·찬성으로 의결.</p>
+          <p><b>제26조(감사)</b> 업무·재산 감사 후 총회 보고.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제21조~제27조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제21조~제27조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제6장 사업</div></div>
+
+  <div class="article" data-article="제28조~제29조">
+    <div class="article-header">
+      <span class="article-num">제28~29조</span>
+      <div class="article-body">
+        <div class="article-title">사업의 종류</div>
+        <div class="article-content">
+          <p class="indent">1. 아들러 개인심리학 기반 개인·집단 심리상담 서비스</p>
+          <p class="indent">2. 심리상담 관련 교육·연수·강의 사업</p>
+          <p class="indent">3. 심리상담 관련 콘텐츠 제작 및 출판 사업</p>
+          <p class="indent">4. 상담 공간 및 시설의 공동 이용 및 관리</p>
+          <p class="indent">5. 제1~4호 부수 사업</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제28조~제29조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제28조~제29조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">제7장 회계 · 제8장 해산</div></div>
+
+  <div class="article" data-article="제30조~제38조">
+    <div class="article-header">
+      <span class="article-num">제30~38조</span>
+      <div class="article-body">
+        <div class="article-title">회계 · 해산 및 청산</div>
+        <div class="article-content">
+          <p><b>제30조(회계연도)</b> 1월 1일 ~ 12월 31일.</p>
+          <p><b>제33조(적립금)</b> 잉여금의 10% 이상 법정적립금.</p>
+          <p><b>제34조(배당)</b> 잉여금 발생 시 총회 결의로 배당.</p>
+          <p><b>제36~38조(해산)</b> 전원 동의로 해산. 이사장이 청산인.</p>
+        </div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'제30조~제38조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제30조~제38조')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+  <div class="chapter"><div class="chapter-title">부칙 및 설립 확정 사항</div></div>
+
+  <div class="addendum">
+    <div class="addendum-title">부칙 제1~4조</div>
+    <p style="font-size:13px; color:var(--muted)">
+      제1조(시행일) 설립신고 완료일부터 시행.<br>
+      제2조(설립 당시 임원) 창립총회에서 선출.<br>
+      제3조(설립 당시 조합원) 발기인은 창립총회에서 조합원 자격 취득.<br>
+      제4조(발기인 직무) 발기인 대표 <b>김이수</b>가 설립 업무 집행.
+    </p>
+  </div>
+
+  <table class="summary-table">
+    <tr><th>조합 명칭</th><td>ADLER MIND 협동조합</td></tr>
+    <tr><th>사무소</th><td>경기도 광주시 남종면 산수로 1652-16</td></tr>
+    <tr><th>이사장</th><td>이경숙</td></tr>
+    <tr><th>이사</th><td>고미경, 신옥선</td></tr>
+    <tr><th>감사</th><td>박정연</td></tr>
+    <tr><th>발기인 대표</th><td>김이수</td></tr>
+    <tr><th>출자 1좌</th><td>100,000원 (1인 최소 1좌)</td></tr>
+    <tr><th>사업개시 예정일</th><td>2026년 8월 15일</td></tr>
+    <tr><th>임시 수납 계좌</th><td>농협 351-09357711-73 (예금주: 김이수)</td></tr>
+  </table>
+
+  <div class="chapter"><div class="chapter-title">전체 의견</div></div>
+  <div class="article" data-article="전체">
+    <div class="article-header">
+      <span class="article-num">전체</span>
+      <div class="article-body">
+        <div class="article-title">정관 전체에 대한 의견</div>
+        <div class="article-content"><p>특정 조항이 아닌 전반적인 의견, 질문, 제안을 남겨주세요.</p></div>
+      </div>
+    </div>
+    <div class="comment-section">
+      <button class="comment-toggle" onclick="toggleForm(this,'전체')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
+      <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="전체적인 의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'전체')">제출</button></div></div>
+      <div class="comments-list"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// SVG 아이콘
+const IC = {
+  doc:     `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+  chat:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+  check:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><polyline points="20 6 9 17 4 12"/></svg>`,
+  edit:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`,
+  help:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+  pause:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><line x1="10" y1="15" x2="10" y2="9"/><line x1="14" y1="15" x2="14" y2="9"/></svg>`,
+  users:   `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  info:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`,
+  warn:    `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+};
+
+const SUPABASE_URL = 'https://vxnjrznlfofxymcobsmg.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4bmpyem5sZm9meHltY29ic21nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyNTIzOTgsImV4cCI6MjA5NTgyODM5OH0.UHu06FFxjhqISC1NaiayIjGCRGZ6ZaxM00Yu6xRH3KA';
+
+const savedName = localStorage.getItem('charter_member');
+if (savedName) document.getElementById('memberSelect').value = savedName;
+document.getElementById('memberSelect').addEventListener('change', e => {
+  localStorage.setItem('charter_member', e.target.value);
+  loadAllComments();
+});
+
+function getMember() { return document.getElementById('memberSelect').value; }
+
+// 현재 사용자가 각 조항에 남긴 의견 캐시 (article_ref → {id, comment_type, content})
+const userComments = {};
+
+async function loadAllComments() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/charter_comments?order=created_at.asc`,
+    { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } });
+  const all = res.ok ? await res.json() : [];
+
+  // 현재 사용자 의견 갱신
+  const member = getMember();
+  Object.keys(userComments).forEach(k => delete userComments[k]);
+  if (member) {
+    all.filter(c => c.member_name === member).forEach(c => {
+      userComments[c.article_ref] = { id: c.id, comment_type: c.comment_type, content: c.content };
+    });
+  }
+
+  document.querySelectorAll('.article').forEach(art => {
+    const ref = art.dataset.article;
+    const comments = all.filter(c => c.article_ref === ref);
+    art.querySelector('.count-badge').textContent = comments.length ? `${comments.length}개` : '0';
+    renderComments(art.querySelector('.comments-list'), comments);
+  });
+  document.getElementById('totalCountBadge').textContent = `의견 ${all.length}개`;
+}
+
+function renderComments(list, comments) {
+  list.innerHTML = '';
+  if (!comments.length) { list.innerHTML = '<p class="no-comment">아직 의견이 없습니다.</p>'; return; }
+  comments.forEach(c => {
+    const dt = new Date(c.created_at);
+    const t = `${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+    const d = document.createElement('div');
+    d.className = `comment-item ${c.comment_type}`;
+    d.innerHTML = `<div class="comment-meta"><span class="comment-member">${c.member_name}</span><span class="comment-type-label">${c.comment_type}</span><span class="comment-time">${t}</span></div><div class="comment-text">${c.content.replace(/\n/g,'<br>')}</div>`;
+    list.appendChild(d);
+  });
+}
+
+function toggleForm(btn, ref) {
+  const form = btn.closest('.comment-section').querySelector('.comment-form');
+  form.classList.toggle('open');
+  if (form.classList.contains('open')) {
+    // 기존 의견이 있으면 폼에 미리 채움
+    const existing = userComments[ref];
+    if (existing) {
+      const rawContent = existing.content === '동의합니다.' ? '' : existing.content;
+      form.querySelector('textarea').value = rawContent;
+      form.querySelectorAll('.type-btn').forEach(b => {
+        b.className = 'type-btn';
+        delete b.dataset.selected;
+        const m = b.getAttribute('onclick')?.match(/'([^']+)'\)$/);
+        if (m && m[1] === existing.comment_type) selectType(b, existing.comment_type);
+      });
+    }
+    form.querySelector('textarea').focus();
+  }
+}
+function closeForm(btn) { btn.closest('.comment-form').classList.remove('open'); }
+function selectType(btn, type) {
+  btn.closest('.type-btns').querySelectorAll('.type-btn').forEach(b => { b.className='type-btn'; delete b.dataset.selected; });
+  btn.className = `type-btn selected-${type}`;
+  btn.dataset.selected = type;
+}
+function getSelectedType(form) {
+  const s = form.querySelector('.type-btn[data-selected]');
+  return s ? s.dataset.selected : null;
+}
+
+async function submitComment(btn, articleRef) {
+  const member = getMember();
+  if (!member) { showToast('먼저 이름을 선택해주세요'); return; }
+  const form = btn.closest('.comment-form');
+  const type = getSelectedType(form);
+  if (!type) { showToast('의견 유형을 선택해주세요'); return; }
+  const rawContent = form.querySelector('textarea').value.trim();
+  const content = rawContent || (type === '동의' ? '동의합니다.' : '');
+  if (!content) { showToast('내용을 입력해주세요'); return; }
+  btn.disabled = true;
+  const isUpdate = !!userComments[articleRef];
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/charter_comments?on_conflict=member_name,article_ref`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'resolution=merge-duplicates,return=minimal'
+    },
+    body: JSON.stringify({ article_ref: articleRef, comment_type: type, content, member_name: member })
+  });
+  if (res.ok) {
+    form.querySelector('textarea').value = '';
+    form.querySelectorAll('.type-btn').forEach(b => { b.className='type-btn'; delete b.dataset.selected; });
+    form.classList.remove('open');
+    showToast(isUpdate ? '의견이 수정됐습니다' : '의견이 등록됐습니다');
+    await loadAllComments();
+  } else { showToast('저장 실패. 다시 시도해주세요'); }
+  btn.disabled = false;
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// 동의 현황 로드
+async function loadApprovals() {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/charter_approvals?select=*`,
+    { headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` } });
+  const data = res.ok ? await res.json() : [];
+
+  // 초기화
+  ['이경숙','고미경','신옥선','박정연','김이수'].forEach(name => {
+    const card = document.getElementById(`card-${name}`);
+    card.className = 'approval-card';
+    card.querySelector('.status-label').textContent = '미확인';
+    card.querySelector('.approval-time').textContent = '';
+  });
+
+  data.forEach(a => {
+    const card = document.getElementById(`card-${a.member_name}`);
+    if (!card) return;
+    card.className = `approval-card ${a.status}`;
+    card.querySelector('.status-label').innerHTML = approvalLabel(a.status);
+    const dt = new Date(a.approved_at);
+    card.querySelector('.approval-time').textContent =
+      `${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+  });
+}
+
+// 동의 제출 (upsert)
+async function submitApproval(status) {
+  const member = getMember();
+  if (!member) { showToast('먼저 이름을 선택해주세요'); return; }
+
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/charter_approvals?on_conflict=member_name`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'resolution=merge-duplicates,return=minimal'
+    },
+    body: JSON.stringify({ member_name: member, status, approved_at: new Date().toISOString() })
+  });
+
+  if (res.ok) {
+    showToast(status === '동의' ? `${member}님 동의가 등록됐습니다` : `${member}님 보류로 표시됐습니다`);
+    await loadApprovals();
+  } else {
+    showToast('저장 실패. 다시 시도해주세요');
+  }
+}
+
+// 이모지 → 아이콘 교체
+function replaceEmojis() {
+  // 상단 타이틀
+  document.querySelector('.topbar .title').innerHTML = IC.doc + ' ADLER MIND 협동조합 정관 검토';
+  // 동의 현황 제목
+  document.querySelector('.approval-panel h3').innerHTML = IC.users + ' 발기인 동의 현황';
+  // 안내 박스 제목
+  const guideB = document.querySelector('.guide-box b');
+  if (guideB) guideB.innerHTML = IC.info + ' 검토 방법';
+  // 승인 버튼
+  document.querySelector('.btn-approve').innerHTML = IC.check + ' 정관 전체에 동의합니다';
+  document.querySelector('.btn-hold').innerHTML = IC.pause + ' 검토 중 (보류)';
+  // 의견 달기 버튼 (모든 comment-toggle)
+  document.querySelectorAll('.comment-toggle').forEach(btn => {
+    const badge = btn.querySelector('.count-badge');
+    btn.innerHTML = '';
+    btn.appendChild(document.createRange().createContextualFragment(IC.chat + ' 의견 달기 '));
+    btn.appendChild(badge);
+  });
+  // 타입 버튼
+  document.querySelectorAll('.type-btn').forEach(btn => {
+    if (btn.textContent.includes('동의')) btn.innerHTML = IC.check + ' 동의';
+    else if (btn.textContent.includes('수정의견')) btn.innerHTML = IC.edit + ' 수정의견';
+    else if (btn.textContent.includes('질문')) btn.innerHTML = IC.help + ' 질문';
+  });
+}
+
+// 동의/보류 상태 텍스트 (JS 내 렌더링)
+function approvalLabel(status) {
+  return status === '동의'
+    ? IC.check + ' 동의완료'
+    : IC.pause + ' 검토중';
+}
+
+loadAllComments();
+loadApprovals();
+replaceEmojis();
+setInterval(() => { loadAllComments(); loadApprovals(); }, 30000);
+</script>
+</body>
+</html>
