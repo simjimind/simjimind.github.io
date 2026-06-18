@@ -10,14 +10,14 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:title" content="ADLER MIND 협동조합 정관">
 <meta property="og:description" content="발기인분들께서는 정관을 검토해주십시오.">
-<meta property="og:image" content="https://simjimind.github.io/adlermind/image/og-image.jpg">
+<meta property="og:image" content="https://simjimind.github.io/adlermind/image/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://simjimind.github.io/adlermind/">
+<meta property="og:url" content="https://simjimind.github.io/adlermind/adlermind_charter_review.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ADLER MIND 협동조합 정관">
 <meta name="twitter:description" content="발기인분들께서는 정관을 검토해주십시오.">
-<meta name="twitter:image" content="https://simjimind.github.io/adlermind/image/og-image.jpg">
+<meta name="twitter:image" content="https://simjimind.github.io/adlermind/image/og-image.png">
 <style>
   :root {
     --green: #555272;
@@ -311,6 +311,36 @@
   .btn-hold:hover { background: var(--yellow); }
   .approval-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
 
+  /* 법적 검토 안내문 */
+  .legal-note { border-top: 1px solid var(--border); background: #f5f4ff; border-left: 4px solid var(--green-light); padding: 14px 16px; font-size: 12.5px; color: #3d3960; line-height: 1.75; }
+  .legal-note .ln-title { font-weight: bold; font-size: 13px; margin-bottom: 8px; color: #555272; }
+  .legal-note .tag-keep { display: inline-block; background: #7c7a9c; color: white; font-size: 10px; padding: 1px 8px; border-radius: 8px; font-weight: bold; margin-left: 6px; vertical-align: middle; }
+  .legal-note .tag-mod { display: inline-block; background: #b06820; color: white; font-size: 10px; padding: 1px 8px; border-radius: 8px; font-weight: bold; margin-left: 6px; vertical-align: middle; }
+  .legal-note .ln-mod { margin-top: 8px; background: rgba(212,160,23,0.1); border-left: 3px solid #d4a017; padding: 6px 10px; border-radius: 0 6px 6px 0; font-size: 12px; }
+  .legal-note .ln-ref { margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--border); font-size: 11px; color: var(--muted); }
+  .legal-note p { margin-bottom: 4px; }
+
+  /* 대댓글 */
+  .reply-list { margin: 8px 0 0 28px; display: flex; flex-direction: column; gap: 6px; border-left: 2px solid var(--border); padding-left: 12px; }
+  .reply-item { padding: 8px 10px; border-radius: 6px; font-size: 12px; background: rgba(255,255,255,0.85); }
+  .reply-item .comment-meta { margin-bottom: 3px; }
+  .reply-prefix { font-size: 11px; color: var(--green-light); margin-right: 2px; }
+  .btn-reply-toggle {
+    background: none; border: none; color: var(--muted); font-size: 11px;
+    padding: 2px 0; cursor: pointer; display: inline-flex; align-items: center;
+    gap: 3px; margin-top: 6px; transition: color 0.15s;
+  }
+  .btn-reply-toggle:hover { color: var(--green); }
+  .reply-form-wrapper { display: none; margin: 8px 0 0 28px; }
+  .reply-form-wrapper.open { display: block; }
+  .reply-input {
+    width: 100%; min-height: 60px; border: 1.5px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; font-size: 12px; font-family: inherit;
+    resize: vertical; background: white; transition: border-color 0.2s;
+  }
+  .reply-input:focus { outline: none; border-color: var(--green-light); }
+  .reply-submit-row { display: flex; justify-content: flex-end; margin-top: 6px; gap: 6px; }
+
   .toast {
     position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
     background: #333; color: white; padding: 10px 24px; border-radius: 24px;
@@ -395,6 +425,13 @@
         <div class="article-content"><p>이 조합의 명칭은 "ADLER MIND 협동조합"이라 한다.</p></div>
       </div>
     </div>
+    <div class="legal-note">
+      <div class="ln-title">▣ 법적 검토 결과 <span class="tag-keep">현행 유지</span></div>
+      <p>협동조합기본법 제3조는 명칭에 <b>"협동조합"이라는 한글 문자</b>만 반드시 포함하면 되고, 앞의 고유명칭 부분은 영어·한자·숫자 무관하게 자유롭게 정할 수 있습니다.</p>
+      <p><b>"ADLER MIND 협동조합"은 적법하며 수정이 필요하지 않습니다.</b> 법은 "협동조합"이라는 한글 문자만 요구하고, 그 앞의 고유명칭을 영어로 정하는 것은 허용됩니다.</p>
+      <p>단, 영어 부분도 공식 등기 명칭의 일부가 되므로 추후 영문명 변경 시 정관 변경(총회 결의 + 시·도지사 신고)이 필요합니다. 처음부터 확정된 영문명을 사용하는 것이 좋습니다.</p>
+      <div class="ln-ref">참고법령 · 협동조합기본법 제3조(명칭) — 국가법령정보센터 www.law.go.kr</div>
+    </div>
     <div class="comment-section">
       <button class="comment-toggle" onclick="toggleForm(this,'제2조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
       <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제2조')">제출</button></div></div>
@@ -437,8 +474,15 @@
       <span class="article-num">제5조</span>
       <div class="article-body">
         <div class="article-title">공고방법</div>
-        <div class="article-content"><p>이 조합의 공고는 조합원 전원에게 전자우편 또는 문자메시지로 한다. 긴급한 경우 전화 통지 후 7일 이내 서면 확인.</p></div>
+        <div class="article-content"><p>이 조합의 공고는 조합원 전원에게 전자우편 또는 문자메시지로 한다. 이 경우 발송일을 공고일로 본다. 긴급한 경우에는 전화로 먼저 통지한 후 3일 이내에 전자우편으로 서면 확인한다.</p></div>
       </div>
+    </div>
+    <div class="legal-note">
+      <div class="ln-title">▣ 법적 검토 결과 <span class="tag-mod">조문 수정됨</span></div>
+      <p>협동조합기본법은 공고방법을 <b>정관으로 정하는 방법으로 위임</b>하며, 신문 게재는 의무사항이 아닙니다. 전자우편·문자메시지 공고는 법적으로 허용됩니다. 창립총회 공고도 동일하며, 신문 공고 의무는 없습니다.</p>
+      <p>단, 창립총회 공고문은 설립신고 시 <b>필수 제출 서류</b>입니다. 이메일 발신 기록이나 문자 발송 내역 등 발송 증빙을 반드시 보관해야 설립신고 시 제출할 수 있습니다.</p>
+      <div class="ln-mod">✏️ <b>수정 내용:</b> "이 경우 발송일을 공고일로 본다" 문구를 추가하여 공고 효력 발생 시점을 명확화했습니다. 긴급 통지 후 서면 확인 기한을 기존 <b>7일 → 3일</b>로 단축하고, 전화 통지 후 전자우편으로 확인하는 방식으로 구체화했습니다.</div>
+      <div class="ln-ref">참고법령 · 협동조합기본법 제16조(정관의 기재사항), 제22조(설립신고 시 제출서류) — 국가법령정보센터 www.law.go.kr · 기획재정부 협동조합포털 www.coop.go.kr</div>
     </div>
     <div class="comment-section">
       <button class="comment-toggle" onclick="toggleForm(this,'제5조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
@@ -461,6 +505,12 @@
         </div>
       </div>
     </div>
+    <div class="legal-note">
+      <div class="ln-title">▣ 법적 검토 결과 <span class="tag-keep">현행 유지</span></div>
+      <p>협동조합에서 조합원은 <b>소유자이자 이용자</b>입니다. 조합원도 상담·교육 등 사업을 이용할 때 이용료를 납부하며, 이것이 조합의 주된 수입원이 됩니다. 외부 고객 대비 우선 이용권 부여나 할인 혜택은 규약으로 별도 정할 수 있습니다.</p>
+      <p><b>조합원 자격 조항(제6조) 자체는 적법하며 수정이 필요하지 않습니다.</b> 가입비(입회금) 도입 여부 및 구체적 사항은 제7조(가입) 항목에 반영했습니다.</p>
+      <div class="ln-ref">참고법령 · 협동조합기본법 제6조(협동조합 등의 기본원칙), 제22조(조합원의 가입) — 국가법령정보센터 www.law.go.kr</div>
+    </div>
     <div class="comment-section">
       <button class="comment-toggle" onclick="toggleForm(this,'제6조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
       <div class="comment-form"><div class="type-btns"><button class="type-btn" onclick="selectType(this,'동의')">✅ 동의</button><button class="type-btn" onclick="selectType(this,'수정의견')">✏️ 수정의견</button><button class="type-btn" onclick="selectType(this,'질문')">❓ 질문</button></div><textarea class="comment-input" placeholder="의견을 작성해주세요..."></textarea><div class="submit-row"><button class="btn-cancel" onclick="closeForm(this)">취소</button><button class="btn-submit" onclick="submitComment(this,'제6조')">제출</button></div></div>
@@ -474,7 +524,7 @@
       <div class="article-body">
         <div class="article-title">가입 · 탈퇴 · 제명 · 권리 · 의무</div>
         <div class="article-content">
-          <p><b>제7조(가입)</b> 가입신청서 → 이사회 2주 이내 결의 → 출자금 납입 후 자격 취득</p>
+          <p><b>제7조(가입)</b> 가입신청서 → 이사회 2주 이내 결의 → 출자금 납입 후 자격 취득. 이사회는 총회가 제정한 규약으로 정하는 가입비를 납입하게 할 수 있으며, 가입비는 반환하지 아니한다.</p>
           <p><b>제8조(탈퇴)</b> 60일 전 서면 통지. 사망·파산 시 당연 탈퇴.</p>
           <p><b>제9조(제명)</b> 총회 의결. 사전 소명 기회 부여.</p>
           <p><b>제10조(환급)</b> 탈퇴·제명 후 회계연도 종료 3개월 이내 환급.</p>
@@ -482,6 +532,15 @@
           <p><b>제12조(의무)</b> 정관 준수·출자금 납부·총회 결의 이행.</p>
         </div>
       </div>
+    </div>
+    <div class="legal-note">
+      <div class="ln-title">▣ 법적 검토 결과 <span class="tag-mod">조문 수정됨</span></div>
+      <p><b>출자금과 가입비의 차이</b></p>
+      <p>· <b>출자금:</b> 협동조합기본법상 정관 필수 기재사항. 탈퇴 시 환급 가능. 조합 자본금 역할.</p>
+      <p>· <b>가입비(입회금):</b> 탈퇴 시 반환하지 않는 수수료 성격. 정관 또는 규약으로 정할 수 있음.</p>
+      <p>금액을 <b>규약으로 위임</b>하면 추후 금액 조정 시 총회 의결만으로 가능하여, 정관 변경에 따른 시·도지사 신고 절차를 생략할 수 있어 운영이 유연합니다.</p>
+      <div class="ln-mod">✏️ <b>수정 내용:</b> 제7조(가입) 항목에 "이사회는 총회가 제정한 규약으로 정하는 가입비를 납입하게 할 수 있으며, 가입비는 반환하지 아니한다"는 조항을 추가했습니다.</div>
+      <div class="ln-ref">참고법령 · 협동조합기본법 제16조(정관의 기재사항), 제17조(규약), 제20조(출자금 납입), 제22조(조합원의 가입) — 국가법령정보센터 www.law.go.kr · 찾기쉬운 생활법령정보 www.easylaw.go.kr</div>
     </div>
     <div class="comment-section">
       <button class="comment-toggle" onclick="toggleForm(this,'제7조~제12조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
@@ -569,9 +628,18 @@
           <p class="indent">2. 심리상담 관련 교육·연수·강의 사업</p>
           <p class="indent">3. 심리상담 관련 콘텐츠 제작 및 출판 사업</p>
           <p class="indent">4. 상담 공간 및 시설의 공동 이용 및 관리</p>
-          <p class="indent">5. 제1~4호 부수 사업</p>
+          <p class="indent">5. 온라인 강의 및 디지털 교육 콘텐츠의 제작·운영·판매 사업</p>
+          <p class="indent">6. 심리상담·교육 관련 물품 및 콘텐츠의 전자상거래·통신판매 사업</p>
+          <p class="indent">7. 제1~6호에 부수하는 사업</p>
         </div>
       </div>
+    </div>
+    <div class="legal-note">
+      <div class="ln-title">▣ 법적 검토 결과 <span class="tag-mod">조문 수정됨</span></div>
+      <p>사업종류를 나중에 추가하려면 <b>정관 변경(총회 결의 + 시·도지사 신고)</b>이 필요합니다. 초기에 폭넓게 기재해두면 이 절차를 반복할 필요가 없습니다.</p>
+      <p>통신판매업을 정관에 명시해두면 향후 스마트스토어·온라인 강의 플랫폼 입점 시 사업자등록 업종 추가가 용이합니다. 협동조합 사업은 조합원의 권익과 연관된 사업이어야 하며, 심리상담·교육과 연관된 온라인 사업은 모두 포함 가능합니다.</p>
+      <div class="ln-mod">✏️ <b>수정 내용:</b> 기존 4개 사업 외에 <b>5호(온라인 강의 및 디지털 교육 콘텐츠 제작·운영·판매)</b>와 <b>6호(전자상거래·통신판매)</b> 2개를 추가했습니다. 부수 사업 번호를 기존 5호에서 <b>7호</b>로 변경했습니다.</div>
+      <div class="ln-ref">참고법령 · 협동조합기본법 제45조(사업의 종류), 전자상거래 등에서의 소비자보호에 관한 법률 제2조(정의) — 국가법령정보센터 www.law.go.kr · 기획재정부 협동조합포털 www.coop.go.kr · 찾기쉬운 생활법령정보 www.easylaw.go.kr</div>
     </div>
     <div class="comment-section">
       <button class="comment-toggle" onclick="toggleForm(this,'제28조~제29조')">💬 의견 달기 <span class="count-badge">로딩중</span></button>
@@ -700,13 +768,56 @@ async function loadAllComments() {
 
 function renderComments(list, comments) {
   list.innerHTML = '';
-  if (!comments.length) { list.innerHTML = '<p class="no-comment">아직 의견이 없습니다.</p>'; return; }
-  comments.forEach(c => {
+  const topLevel = comments.filter(c => !c.parent_id);
+  const repliesMap = {};
+  comments.filter(c => c.parent_id).forEach(c => {
+    if (!repliesMap[c.parent_id]) repliesMap[c.parent_id] = [];
+    repliesMap[c.parent_id].push(c);
+  });
+  if (!topLevel.length) { list.innerHTML = '<p class="no-comment">아직 의견이 없습니다.</p>'; return; }
+  topLevel.forEach(c => {
     const dt = new Date(c.created_at);
     const t = `${dt.getMonth()+1}/${dt.getDate()} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
     const d = document.createElement('div');
     d.className = `comment-item ${c.comment_type}`;
+    d.dataset.commentId = c.id;
     d.innerHTML = `<div class="comment-meta"><span class="comment-member">${c.member_name}</span><span class="comment-type-label">${c.comment_type}</span><span class="comment-time">${t}</span></div><div class="comment-text">${c.content.replace(/\n/g,'<br>')}</div>`;
+
+    // 기존 대댓글
+    const replies = repliesMap[c.id] || [];
+    if (replies.length) {
+      const rl = document.createElement('div');
+      rl.className = 'reply-list';
+      replies.forEach(r => {
+        const rdt = new Date(r.created_at);
+        const rt = `${rdt.getMonth()+1}/${rdt.getDate()} ${String(rdt.getHours()).padStart(2,'0')}:${String(rdt.getMinutes()).padStart(2,'0')}`;
+        const rd = document.createElement('div');
+        rd.className = 'reply-item';
+        rd.innerHTML = `<div class="comment-meta"><span class="reply-prefix">↩</span><span class="comment-member">${r.member_name}</span><span class="comment-time">${rt}</span></div><div class="comment-text">${r.content.replace(/\n/g,'<br>')}</div>`;
+        rl.appendChild(rd);
+      });
+      d.appendChild(rl);
+    }
+
+    // 답글 버튼
+    const replyBtn = document.createElement('button');
+    replyBtn.className = 'btn-reply-toggle';
+    replyBtn.innerHTML = IC.chat + ' 답글';
+    d.appendChild(replyBtn);
+
+    // 답글 폼
+    const rfw = document.createElement('div');
+    rfw.className = 'reply-form-wrapper';
+    rfw.innerHTML = `<textarea class="reply-input" placeholder="답글을 작성해주세요..."></textarea><div class="reply-submit-row"><button class="btn-cancel">취소</button><button class="btn-submit">등록</button></div>`;
+    rfw.querySelector('.btn-cancel').addEventListener('click', () => rfw.classList.remove('open'));
+    rfw.querySelector('.btn-submit').addEventListener('click', () => submitReply(rfw, c.id, c.article_ref));
+    d.appendChild(rfw);
+
+    replyBtn.addEventListener('click', () => {
+      rfw.classList.toggle('open');
+      if (rfw.classList.contains('open')) rfw.querySelector('.reply-input').focus();
+    });
+
     list.appendChild(d);
   });
 }
@@ -767,6 +878,32 @@ async function submitComment(btn, articleRef) {
     form.querySelectorAll('.type-btn').forEach(b => { b.className='type-btn'; delete b.dataset.selected; });
     form.classList.remove('open');
     showToast(isUpdate ? '의견이 수정됐습니다' : '의견이 등록됐습니다');
+    await loadAllComments();
+  } else { showToast('저장 실패. 다시 시도해주세요'); }
+  btn.disabled = false;
+}
+
+async function submitReply(wrapper, parentId, articleRef) {
+  const member = getMember();
+  if (!member) { showToast('먼저 이름을 선택해주세요'); return; }
+  const content = wrapper.querySelector('.reply-input').value.trim();
+  if (!content) { showToast('답글 내용을 입력해주세요'); return; }
+  const btn = wrapper.querySelector('.btn-submit');
+  btn.disabled = true;
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/charter_comments`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_KEY,
+      'Authorization': `Bearer ${SUPABASE_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=minimal'
+    },
+    body: JSON.stringify({ article_ref: articleRef, comment_type: '답글', content, member_name: member, parent_id: parentId })
+  });
+  if (res.ok) {
+    wrapper.querySelector('.reply-input').value = '';
+    wrapper.classList.remove('open');
+    showToast('답글이 등록됐습니다');
     await loadAllComments();
   } else { showToast('저장 실패. 다시 시도해주세요'); }
   btn.disabled = false;
