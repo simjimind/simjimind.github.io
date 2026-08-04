@@ -1,0 +1,233 @@
+[
+    {
+        "emoji":  "☀️",
+        "name":  "sun",
+        "cldr":  "sun",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "⚡",
+        "name":  "high-voltage",
+        "cldr":  "high voltage",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "⚖️",
+        "name":  "balance-scale",
+        "cldr":  "balance scale",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "⛈️",
+        "name":  "cloud-with-lightning-and-rain",
+        "cldr":  "cloud with lightning and rain",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🌅",
+        "name":  "sunrise",
+        "cldr":  "sunrise",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🌟",
+        "name":  "glowing-star",
+        "cldr":  "glowing star",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🌤️",
+        "name":  "sun-behind-small-cloud",
+        "cldr":  "sun behind small cloud",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🌧️",
+        "name":  "cloud-with-rain",
+        "cldr":  "cloud with rain",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🌿",
+        "name":  "herb",
+        "cldr":  "herb",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "👃",
+        "name":  "nose",
+        "cldr":  "nose",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "💪",
+        "name":  "flexed-biceps",
+        "cldr":  "flexed biceps",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "📄",
+        "name":  "page-facing-up",
+        "cldr":  "page facing up",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🕊️",
+        "name":  "dove",
+        "cldr":  "dove",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🕯️",
+        "name":  "candle",
+        "cldr":  "candle",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😄",
+        "name":  "grinning-face-with-smiling-eyes",
+        "cldr":  "grinning face with smiling eyes",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😌",
+        "name":  "relieved-face",
+        "cldr":  "relieved face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😑",
+        "name":  "expressionless-face",
+        "cldr":  "expressionless face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😔",
+        "name":  "pensive-face",
+        "cldr":  "pensive face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😖",
+        "name":  "confounded-face",
+        "cldr":  "confounded face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😞",
+        "name":  "disappointed-face",
+        "cldr":  "disappointed face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😟",
+        "name":  "worried-face",
+        "cldr":  "worried face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😠",
+        "name":  "angry-face",
+        "cldr":  "angry face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😢",
+        "name":  "crying-face",
+        "cldr":  "crying face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😣",
+        "name":  "persevering-face",
+        "cldr":  "persevering face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😤",
+        "name":  "face-with-steam-from-nose",
+        "cldr":  "face with steam from nose",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "😥",
+        "name":  "sad-but-relieved-face",
+        "cldr":  "sad but relieved face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🙏",
+        "name":  "folded-hands",
+        "cldr":  "folded hands",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🛋️",
+        "name":  "couch-and-lamp",
+        "cldr":  "couch and lamp",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🤩",
+        "name":  "star-struck",
+        "cldr":  "star-struck",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🥰",
+        "name":  "smiling-face-with-hearts",
+        "cldr":  "smiling face with hearts",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🥱",
+        "name":  "yawning-face",
+        "cldr":  "yawning face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🥺",
+        "name":  "pleading-face",
+        "cldr":  "pleading face",
+        "png":  true,
+        "svg":  true
+    },
+    {
+        "emoji":  "🧬",
+        "name":  "dna",
+        "cldr":  "dna",
+        "png":  true,
+        "svg":  true
+    }
+]
